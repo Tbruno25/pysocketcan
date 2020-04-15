@@ -19,7 +19,7 @@ The  ```pysocketcan``` equivalent is
 Use [pip](https://pip.pypa.io/en/stable/) to install
 
 ```bash
-pip install pysocketcan
+$ pip install pysocketcan
 ```
 
 ## Usage
@@ -51,6 +51,12 @@ If can-utils is installed you can also use
 >>> can0.receive() # returns bus message
 >>> can0.send(100, 12345678) # adds message to bus
 ```
-
+#### Note:
+To function correctly Python needs root priveleges
+```bash
+$ sudo python3
+     # or
+$ sudo venv/bin/python3
+```
 ## Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
