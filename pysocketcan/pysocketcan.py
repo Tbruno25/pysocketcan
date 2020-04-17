@@ -8,6 +8,7 @@ from . import scripts
 class State(Enum):
     UP = 1
     DOWN = 0
+    STOP = "STOPPED"
 
 
 class Mode(Enum):
@@ -28,7 +29,9 @@ class Interface:
 
     @property
     def state(self):
-        return scripts.get_states(self.id)
+        msg = scripts.get_states(self.id)
+        print(msg, end=" | ")
+        return State(msg != State.STOP.value)
 
     @state.setter
     def state(self, s_name):
