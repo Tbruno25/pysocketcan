@@ -59,7 +59,7 @@ class Interface:
     @baud.setter
     @reset
     def baud(self, rate):
-        while self.state != "STOPPED":
+        while self.state != State.STOP:
             sleep(0.25)
         scripts.set_baud(self.id, rate)
 
