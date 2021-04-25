@@ -25,7 +25,7 @@ $ pip install pysocketcan
 ## Usage
 
 ```python
-import pysocket as pysc
+import pysocketcan as pysc
 
 >>> pysc.view_available() # returns available interfaces
 'can0'
